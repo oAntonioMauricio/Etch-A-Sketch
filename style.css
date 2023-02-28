@@ -37,3 +37,19 @@
     align-items: center;
     gap: 25px;
 }
+
+#sliderValue {
+    text-align: center;
+}
+
+#clearButton {
+    padding: 10px 30px;
+}
+
+.slidecontainer {
+    
+}
+
+#myRange{
+    color: #60a5fa;
+}

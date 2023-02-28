@@ -29,3 +29,11 @@
 .squareOn {
     background-color: black;
 }
+
+.flexRow {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}

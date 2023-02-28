@@ -5,6 +5,9 @@ let clearButton = document.querySelector("#clearButton");
 
 let containerChildren = document.querySelector("#squaresContainer").children
 
+let slider = document.getElementById("myRange");
+let sliderValue = document.getElementById("sliderValue");
+
 //detect mousedown on the container
 let holdingMouse = false;
 
@@ -37,3 +40,12 @@ squareArray.forEach(square => {
 
 //add functionality to the buttons
 clearButton.addEventListener("click", () => { Array.from(containerChildren).forEach(children => children.classList.remove("squareOn")) })
+
+// add functionality to the slider
+sliderValue.innerText = slider.value;
+
+slider.oninput = function () {
+    sliderValue.innerText = this.value;
+    numberOfSquares = this.value;
+    console.log(numberOfSquares);
+}

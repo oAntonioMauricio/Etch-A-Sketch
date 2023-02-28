@@ -5,6 +5,17 @@ let clearButton = document.querySelector("#clearButton");
 
 let containerChildren = document.querySelector("#squaresContainer").children
 
+//detect mousedown on the container
+let holdingMouse = false;
+
+squaresContainer.addEventListener("mousedown", () => {
+    holdingMouse = !holdingMouse
+})
+
+squaresContainer.addEventListener("mouseup", () => {
+    holdingMouse = false;
+})
+
 // loop will create the squares
 let squareArray = [];
 
@@ -18,7 +29,9 @@ squareArray.forEach(square => {
     square = document.createElement("div");
     square.classList.add('square');
     square.style.cssText = `width: ${480 / numberOfSquares}px; height: ${480 / numberOfSquares}px`;
-    square.addEventListener("click", () => { square.classList.toggle("squareOn") });
+    square.addEventListener("mousemove", () => {
+        if (holdingMouse) { square.classList.add("squareOn") }
+    });
     squaresContainer.appendChild(square);
 })
 

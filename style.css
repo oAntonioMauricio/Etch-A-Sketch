@@ -22,7 +22,10 @@
 }
 
 .square {
-    background-color: blue;
     box-sizing: border-box;
-    border: 2px solid black;
+    border: 0.5px solid grey;
+}
+
+.squareOn {
+    background-color: black;
 }

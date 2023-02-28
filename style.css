@@ -10,8 +10,19 @@
     align-items: center;
     min-height: 100vh;
     background-color: whitesmoke;
+    gap: 40px;
 }
 
 .squaresContainer {
-    width: 960px;
+    width: 480px;
+    height: 480px;
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+}
+
+.square {
+    background-color: blue;
+    box-sizing: border-box;
+    border: 2px solid black;
 }
